@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="styleadmin.css">
+    <link rel="icon" href="images/LOGO/JA white.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+</head>
+    
+<body>
+    <nav id="adminNav">
+        <img src="images/LOGO/JA black.png" alt="" style="width: 100px;">
+        <h3 class="myadtitle">Admin</h3>
+        <ul class="adlink">
+            <li><a class="addlink-btn adActice" id="on" onclick="openTab3(event, 'ad1')">Coffee</a></li>
+            <li><a class="addlink-btn" onclick="openTab3(event, 'ad2')">Pastry</a></li>
+            <li><a class="addlink-btn" onclick="openTab3(event, 'ad3')">Dessert</a></li>
+            <li><a class="addlink-btn" onclick="openTab3(event, 'ad4')">Merch</a></li>
+            <li><a class="addlink-btn" onclick="openTab3(event, 'ad5')">Orders</a></li>
+        </ul>
+        <a href="index.html" id="logu"><i class="bi bi-person-circle"></i></a>
+    </nav>
+
+    <nav id="adminNav12">
+      <img src="images/LOGO/JA black.png" alt="" style="width: 80px;">
+      <a onclick="cload()" id="cload"><i class="bi bi-x"></i></a>
+      <h3 class="myadtitle">Admin</h3>
+      <ul class="adlink">
+          <li><a class="addlink-btn adActice" id="on" onclick="openTab3(event, 'ad1')">Coffee</a></li>
+          <li><a class="addlink-btn" onclick="openTab3(event, 'ad2')">Pastry</a></li>
+          <li><a class="addlink-btn" onclick="openTab3(event, 'ad3')">Dessert</a></li>
+          <li><a class="addlink-btn" onclick="openTab3(event, 'ad4')">Merch</a></li>
+          <li><a class="addlink-btn" onclick="openTab3(event, 'ad5')">Orders</a></li>
+      </ul>
+      <a href="index.html" id="logu"><i class="bi bi-person-circle"></i></a>
+  </nav>
+    
+    <main>
+      <section class="popadd" id="sec">
+        <div>
+          <h1 class="poptitle">Add Product Form</h1>
+          <span style=" position: absolute; top: 3px; right: 15px;">
+            <a onclick="closeprod1()" id="popx" class="popxbut"><i class="bi bi-x"></i></a>
+          </span>
+        </div>
+        
+        <div class="box">+</div>
+        <input type="file" id="addimage"></input>
+        
+        <div class="popform">
+            <label for="category">Category : </label>
+            <select name="category" class="category">
+              <option value="Coffee">Coffee</option>
+              <option value="Pastry">Pastry</option>
+              <option value="Dessert">Dessert</option>
+              <option value="Merch">Merch</option>
+              <option value="Merch">Add category</option>
+            </select>
+            <br><br>
+            <label for="product">Product Name : </label>
+            <input type="text" id="product" class="category" required>
+            <br><br>
+            <label for="price">Product Price : </label>
+            <input type="text" id="price" class="category" required>
+            <br><br>
+            <label for="price">Product Stock : </label>
+            <input type="text" id="price" class="category" required>
+            <br><br>
+            <label for="description" style="float: left;">Product Description : </label>
+            <textarea name="description" id="" rows="10" cols="50" required></textarea>
+            <button id="SUBMIT" onclick="closeprod()" >SUBMIT</button>
+        </div>
+      </section>
+        <section class="adDisp1" id="ad1">
+            <div class="adname">
+                <a id="burger" onclick="showMenu()"><i class="bi bi-list"></i></a>
+                <h3>Coffee Section</h3>
+                <button class="addproduct" onclick="addprod()">
+                    <i class="bi bi-plus-circle"></i>
+                    <p>Add Product</p>
+                </button>
+            </div>
+            <div class="stats">
+                <h3>Overview</h3>
+                <div>
+                <img src="images/admin_pics/Screenshot 2024-03-14 230247.png" alt="">
+                <img src="images/admin_pics/Screenshot 2024-03-14 230303.png" alt="">
+                <img src="images/admin_pics/Screenshot 2024-03-14 230318.png" alt="">
+                <img src="images/admin_pics/Screenshot 2024-03-14 230333.png" alt="">
+                </div>
+            </div>
+            <div class="stats">
+                <h3>Ranking</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Product Name</th>
+                            <th>Status</th>
+                            <th>Sold</th>
+                            <th>Items</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Caffè Latte</td>
+                          <td>Available</td>
+                          <td>10</td>
+                          <td>25</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Caffè Americano</td>
+                          <td>Available</td>
+                          <td>9</td>
+                          <td>25</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Macchiato</td>
+                          <td>Available</td>
+                          <td>7</td>
+                          <td>25</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>Chai Tea</td>
+                          <td>Available</td>
+                          <td>6</td>
+                          <td>25</td>
+                        </tr>
+                      </tbody>
+                </table>
+            </div>
+        </section> 
+        <section class="adDisp1" id="ad2">
+            <div class="adname">
+                <a id="burger" onclick="showMenu()"><i class="bi bi-list"></i></a>
+                <h3>Pastry Section</h3>
+                <button class="addproduct" onclick="addprod()">
+                  <i class="bi bi-plus-circle"></i>
+                  <p>Add Product</p>
+              </button>
+            </div>
+            <div class="stats">
+                <h3>Overview</h3>
+                <div>
+                <img src="images/admin_pics/Screenshot 2024-03-14 230247.png" alt="">
+                <img src="images/admin_pics/Screenshot 2024-03-14 230303.png" alt="">
+                <img src="images/admin_pics/Screenshot 2024-03-14 230318.png" alt="">
+                <img src="images/admin_pics/Screenshot 2024-03-14 230333.png" alt="">
+                </div>
+            </div>
+            <div class="stats">
+                <h3>Ranking</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Product Name</th>
+                            <th>Status</th>
+                            <th>Sold</th>
+                            <th>Items</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Rainbow Cookie</td>
+                          <td>Unavailable</td>
+                          <td>25</td>
+                          <td>25</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Mini Donuts</td>
+                          <td>Available</td>
+                          <td>15</td>
+                          <td>25</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Choco Peanut Butter Cupcake</td>
+                          <td>Available</td>
+                          <td>12</td>
+                          <td>25</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>Éclair</td>
+                          <td>Available</td>
+                          <td>7</td>
+                          <td>25</td>
+                        </tr>
+                      </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="adDisp1" id="ad3">
+            <div class="adname">
+                <a id="burger" onclick="showMenu()"><i class="bi bi-list"></i></a>
+                <h3>Dessert Section</h3>
+                <button class="addproduct" onclick="addprod()">
+                  <i class="bi bi-plus-circle"></i>
+                  <p>Add Product</p>
+              </button>
+            </div>
+            <div class="stats">
+                <h3>Overview</h3>
+                <div>
+                <img src="images/admin_pics/Screenshot 2024-03-14 230247.png" alt="">
+                <img src="images/admin_pics/Screenshot 2024-03-14 230303.png" alt="">
+                <img src="images/admin_pics/Screenshot 2024-03-14 230318.png" alt="">
+                <img src="images/admin_pics/Screenshot 2024-03-14 230333.png" alt="">
+                </div>
+            </div>
+            <div class="stats">
+                <h3>Ranking</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Product Name</th>
+                            <th>Status</th>
+                            <th>Sold</th>
+                            <th>Items</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Parfait au Baileys et au Oréo</td>
+                          <td>Available</td>
+                          <td>18</td>
+                          <td>25</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Strawberry Tiramisu</td>
+                          <td>Available</td>
+                          <td>15</td>
+                          <td>25</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Blueberry Cheesecake</td>
+                          <td>Available</td>
+                          <td>13</td>
+                          <td>25</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>Mocha Brownie Cake</td>
+                          <td>Available</td>
+                          <td>9</td>
+                          <td>25</td>
+                        </tr>
+                      </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="adDisp1" id="ad4">
+            <div class="adname">
+              <a id="burger" onclick="showMenu()"><i class="bi bi-list"></i></a>
+                <h3>Merch Section</h3>
+                <button class="addproduct" onclick="addprod()">
+                  <i class="bi bi-plus-circle"></i>
+                  <p>Add Product</p>
+              </button>
+            </div>
+            <div class="stats">
+                <h3>Overview</h3>
+                <div>
+                <img src="images/admin_pics/Screenshot 2024-03-14 230247.png" alt="">
+                <img src="images/admin_pics/Screenshot 2024-03-14 230303.png" alt="">
+                <img src="images/admin_pics/Screenshot 2024-03-14 230318.png" alt="">
+                <img src="images/admin_pics/Screenshot 2024-03-14 230333.png" alt="">
+                </div>
+            </div>
+            <div class="stats">
+                <h3>Ranking</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Product Name</th>
+                            <th>Status</th>
+                            <th>Sold</th>
+                            <th>Items</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Bibliotheque</td>
+                          <td>Available</td>
+                          <td>6</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Wild Rose</td>
+                          <td>Available</td>
+                          <td>4</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Fireside</td>
+                          <td>Available</td>
+                          <td>2</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>Vanilla Sage</td>
+                          <td>Available</td>
+                          <td>1</td>
+                          <td>10</td>
+                        </tr>
+                      </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="adDisp1" id="ad5">
+          <div class="adname">
+            <a id="burger" onclick="showMenu()"><i class="bi bi-list"></i></a>
+              <h3>Confirming Orders Section</h3>
+          </div>
+          <div class="stats">
+              <h3>Pending Orders</h3>
+              <pop class="quarter">
+                <div class="box-pending">
+                  <h1 style="padding: 5px; border-bottom: 2px solid black;" id="p">Coffee</h1>
+                      <div class="pending-items">
+                        <h5>2x</h5>
+                        <h3>Black Coffee</h3>
+                        <button onclick="con()">
+                          Confirm
+                        </button>
+                      </div>
+                      <div class="pending-items">
+                        <h5>1x</h5>
+                        <h3>Chai Tea</h3>
+                        <button onclick="con()">
+                          Confirm
+                        </button>
+                      </div>
+                      <div class="pending-items">
+                        <h5>3x</h5>
+                        <h3>Lemonade</h3>
+                        <button onclick="con()">
+                          Confirm
+                        </button>
+                      </div>
+                      <div class="pending-items">
+                        <h5>2x</h5>
+                        <h3>Caffe Latte</h3>
+                        <button onclick="con()">
+                          Confirm
+                        </button>
+                      </div>
+                      <div class="pending-items">
+                        <h5>1x</h5>
+                        <h3>Macchiato</h3>
+                        <button onclick="con()">
+                          Confirm
+                        </button>
+                      </div>
+                  <div class="pending-order"></div>
+                </div>
+                <div class="box-pending">
+                  <h1 style="padding: 5px; border-bottom: 2px solid black;" id="p">Pastry</h1>
+                      <div class="pending-items">
+                        <h5>5x</h5>
+                        <h3>Mini Donuts</h3>
+                        <button onclick="con()">
+                          Confirm
+                        </button>
+                      </div>
+                      <div class="pending-items">
+                        <h5>2x</h5>
+                        <h3>Éclair</h3>
+                        <button onclick="con()">
+                          Confirm
+                        </button>
+                      </div>
+                      <div class="pending-items">
+                        <h5>2x</h5>
+                        <h3>Croissant</h3>
+                        <button onclick="con()">
+                          Confirm
+                        </button>
+                      </div>
+                      <div class="pending-items">
+                        <h5>3x</h5>
+                        <h3>Macarons</h3>
+                        <button onclick="con()">
+                          Confirm
+                        </button>
+                      </div>
+                      <div class="pending-items">
+                        <h5>2x</h5>
+                        <h3>Cruffins</h3>
+                        <button onclick="con()">
+                          Confirm
+                        </button>
+                      </div>
+                  <div class="pending-order"></div>
+                </div>
+                <div class="box-pending">
+                  <h1 style="padding: 5px; border-bottom: 2px solid black;" id="p">Dessert</h1>
+                      <div class="pending-items">
+                        <h5>1x</h5>
+                        <h3>Leche Flan</h3>
+                        <button onclick="con()">
+                          Confirm
+                        </button>
+                      </div>
+                      <div class="pending-items">
+                        <h5>5x</h5>
+                        <h3>Churros</h3>
+                        <button onclick="con()">
+                          Confirm
+                        </button>
+                      </div>
+                      <div class="pending-items">
+                        <h5>3x</h5>
+                        <h3>Oreo Truffles</h3>
+                        <button onclick="con()">
+                          Confirm
+                        </button>
+                      </div>
+                      <div class="pending-items">
+                        <h5>2x</h5>
+                        <h3>Leche Flan</h3>
+                        <button onclick="con()">
+                          Confirm
+                        </button>
+                      </div>
+                      <div class="pending-items">
+                        <h5>3x</h5>
+                        <h3>Oreo Truffles</h3>
+                        <button onclick="con()">
+                          Confirm
+                        </button>
+                      </div>
+
+                  <div class="pending-order"></div>
+                </div>
+                <div class="box-pending">
+                  <h1 style="padding: 5px; border-bottom: 2px solid black;" id="p">Merch</h1>
+                        <div class="pending-items">
+                          <h5>1x</h5>
+                          <h3>Bibliotheque</h3>
+                          <button onclick="con()">
+                            Confirm
+                          </button>
+                        </div>
+                        <div class="pending-items">
+                          <h5>1x</h5>
+                          <h3>Vanilla Sage</h3>
+                          <button onclick="con()">
+                            Confirm
+                          </button>
+                        </div>
+                        <div class="pending-items">
+                          <h5>2x</h5>
+                          <h3>Lavender Rose</h3>
+                          <button onclick="con()">
+                            Confirm
+                          </button>
+                        </div>
+                        <div class="pending-items">
+                          <h5>1x</h5>
+                          <h3>Fireside</h3>
+                          <button onclick="con()">
+                            Confirm
+                          </button>
+                        </div>
+                        <div class="pending-items">
+                          <h5>1x</h5>
+                          <h3>La Jolie Muse</h3>
+                          <button onclick="con()">
+                            Confirm
+                          </button>
+                        </div>
+                  <div class="pending-order"></div>
+                </div>
+              </pop>
+          </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

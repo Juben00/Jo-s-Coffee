@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JA's Coffee</title>
+    <link rel="icon" href="images/LOGO/JA white.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="images/LOGO/JA black 120.png" alt="MyLOGO">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menuPage.html" class="act">Menu</a></li>
+                <li><a href="blog.html">Reviews</a></li>
+                <li><a href="contactPage.html">Contact</a></li>
+            </ul>
+            <a href="cart.html"><i class="bi bi-bag-check"></i></a>
+            <a onclick="show_login()"><i class="bi bi-person"></i></a>
+            <button onclick="openNav()" class="list"><i class="bi bi-list"></i></button>
+        </nav>
+    </header>
+    <div id="mySidenav" class="sidenav">
+        <a class="closebtn" onclick="closeNav()"><i class="bi bi-x"></i></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menuPage.html">Menu</a></li>
+            <li><a href="blog.html">Reviews</a></li>
+            <li><a href="contactPage.html">Contact</a></li>
+            <li><a href="cart.html"><i class="bi bi-bag-check"></i> Cart</a></li>
+            <li><a onclick="show_login()"><i class="bi bi-person"></i> Login</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="cover-photo">
+            <img src="images/background-footer/Your paragraph text.png" alt="MyBackground">
+        </div>
+        <section id="login">
+            <div class="log">
+              <a onclick="close_login()"><i class="bi bi-x"></i></a>
+              <h3>Hello there!</h3>
+              <p>Please Log In to Continue</p>
+              <form action="#" class="signin-form">
+                <label for="Username" >Username:</label>
+                <input
+                  type="text"
+                  id="Usernamet"
+                  placeholder="joevinansoc870@gmail.com" required
+                /><br />
+                <label for="Password">Password:</label>
+                <input type="password" id="Passwordt" placeholder="*******" required/><br />
+                <div>
+                  <button class="login-button" id="login-btn">Login</button>
+                  <a onclick="show_sign()">Create Account?</a>
+                </div>
+              </form>
+            </div>
+          </section>
+        <section id="login1">
+            <div class="log">
+                <h3>Create Account</h3>
+                <p>Fill up the form</p>
+                <form action="#" class="signin-form2">
+                    <div>
+                        <label for="Fname">First Name:</label>
+                        <input type="text" id="Fname" placeholder="John"><br>
+                        <label for="Lname">Last Name:</label>
+                        <input type="text" id="Lname" placeholder="Abdul"><br>
+                        <label for="Email">Email:</label>
+                        <input type="text" id="Email" placeholder="joevin0@gmail.com"><br>
+                        <label for="Username">Username:</label>
+                        <input type="text" id="Username" placeholder="User"><br>
+                        <label for="Password">Password:</label>
+                        <input type="password" id="Password" placeholder="*******"><br>
+                        <label for="Password">Password:</label>
+                        <input type="password" id="Password" placeholder="*******"><br>
+                        <label for="Phone">Phone Num:</label>
+                        <input type="tel" id="Phone" placeholder="09*********"><br>
+                        <label for="Code">Pin:</label>
+                        <input type="number" id="code" placeholder="####"><br>
+                        <div>
+                            <button class="login-button">Signup</button>
+                            <a onclick="close_sign()">Already have an account?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <h3 class="navi menu">Menu</h3>
+        <div class="min-nav">
+            <button id="but1" class="min-but active" onclick="openTab(event, 'show-drink')">Drinks</button>
+            <button class="min-but" onclick="openTab(event, 'show-pastry')">Pastry</button>
+            <button class="min-but" onclick="openTab(event, 'show-dessert')">Desserts</button>
+            <button class="min-but" onclick="openTab(event, 'show-merch')">Merch</button>
+        </div>
+        <hr>
+        <section id="show-drink" class="container drinks">
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/paper.png', 'Black  Coffee', 'Black coffee is a beverage made from roasted coffee beans. The beans are ground and soaked in water, which releases their flavor, color, caffeine content, and nutrients. s')">
+                <img src="images/Cups/paper.png" alt="">
+                <h3>Black Coffee</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">Black coffee is a beverage made from roasted coffee beans.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/paper2.png', 'Caramel Macchiato', 'This medium-dark roast has a rich, full flavor with hints of dark chocolate, caramel, and a bit of toasted nuts.')">
+                <img src="images/Cups/paper2.png" alt="">
+                <h3>Caramel Macchiato</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">This medium-dark roast has a rich, full flavor with hints of dark chocolate, caramel,
+                    and a bit of toasted nuts.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/paper3.png', 'Coffee Milkshake', 'Indulge in the creamy decadence of a coffee milkshake, where the bold flavors of freshly brewed coffee blend seamlessly with smooth, velvety ice cream.')">
+                <img src="images/Cups/paper3.png" alt="">
+                <h3>Coffee Milkshake</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">Indulge in the creamy decadence of a coffee milkshake, where the bold flavors of freshly
+                    brewed coffee blend</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/paper4.png', 'Macchiato', 'Served in a small cup, the macchiato is a popular choice for those who enjoy a strong coffee with just a touch of dairy to enhance its flavor.')">
+                <img src="images/Cups/paper4.png" alt="">
+                <h3>Macchiato</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">Macchiato is a popular choice for those who enjoy a strong
+                    coffee with just a touch of dairy to enhance its flavor.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/paper5.png', 'Caffè Latte', 'A milk coffee consisting of either one or two shots of espresso, steamed milk, and a delicate layer of frothed milk crowning it.')">
+                <img src="images/Cups/paper5.png" alt="">
+                <h3>Caffè Latte</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">A milk coffee consisting of either one or two shots of espresso, steamed milk, and a
+                    delicate layer of frothed milk crowning it.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/paper6.png', 'Caffè Americano', ' A coffee beverage made by adding hot water to espresso, creating a drink with a lighter taste and increased volume.')">
+                <img src="images/Cups/paper6.png" alt="">
+                <h3>Caffè Americano</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text"> A coffee beverage made by adding hot water to espresso, creating a drink with a lighter
+                    taste and increased volume.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/paper7.png', 'Lemonade', 'A zesty and invigorating drink made by combining lemon juice, water, and sugar.')">
+                <img src="images/Cups/paper7.png" alt="">
+                <h3>Lemonade</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">A zesty and invigorating drink made by combining lemon juice, water, and sugar.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/paper8.png', 'Chai Tea', 'Aromatic blend of black tea with aromatic spices.')">
+                <img src="images/Cups/paper8.png" alt="">
+                <h3>Chai Tea</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">Aromatic blend of black tea with aromatic spices.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/paper9.png', 'Java Chip Frappe', ' It offers a creamy texture with a rich coffee flavor complemented by the indulgent addition of chocolate chips')">
+                <img src="images/Cups/paper9.png" alt="">
+                <h3>Java Chip Frappe</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">It offers a creamy texture with a rich coffee flavor complemented by the indulgent
+                    addition of chocolate chips</p>
+            </div>
+        </section>
+        <section id="show-pastry" class="container drinks">
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/pastry1.png', 'Mini Donuts', 'Perfect for snacking or as a dessert option, mini donuts are sure to satisfy any sweet craving with their delightful taste and adorable size.')">
+                <img src="images/Cups/pastry1.png" alt="">
+                <h3>Mini Donuts</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">Mini donuts are sure to satisfy any sweet craving with their delightful taste and
+                    adorable size.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/pastry2.png', 'Rainbow Cookie', 'Sweet and colorful Cookie topped with rainbow-colored chocolate chips .')">
+                <img src="images/Cups/pastry2.png" alt="">
+                <h3>Rainbow Cookie</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">Sweet and colorful Cookie topped with rainbow-colored chocolate chips .</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/pastry3.png', 'Macarons', ' These colorful and dainty treats come in a variety of flavors and are known for their crispy exterior and soft, chewy interior.')">
+                <img src="images/Cups/pastry3.png" alt="">
+                <h3>Macarons</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">These colorful and dainty treats come in a variety of flavors and are known for their
+                    crispy exterior and soft, chewy interior.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/pastry4.png', 'Cruffins', 'Cruffins are filled with various sweet or savory fillings, making them a delicious and indulgent treat for pastry lovers.')">
+                <img src="images/Cups/pastry4.png" alt="">
+                <h3>Cruffins</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">Cruffins are filled with various sweet or savory fillings, making them a delicious and
+                    indulgent treat for pastry lovers.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/pastry5.png', 'Choco Peanut Butter Cupcake', 'A delectable treat combining rich chocolate and creamy peanut butter flavors, the Choco Peanut Butter Cupcake is a delightful indulgence.')">
+                <img src="images/Cups/pastry5.png" alt="">
+                <h3 style="font-size: 16px;">Choco Peanut Butter Cupcake</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">A delectable the Choco
+                    Peanut Butter Cupcake is a delightful indulgence.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/pastry6.png', 'Chocolate donuts', 'Coated in a smooth layer of chocolate glaze, these indulgent pastries are perfect for satisfying sweet cravings any time of day.')">
+                <img src="images/Cups/pastry6.png" alt="">
+                <h3>Chocolate donuts</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">Coated in a smooth layer of chocolate glaze, these indulgent pastries are perfect for
+                    satisfying sweet cravings any time of day.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/pastry7.png', 'Croissant', 'With a golden-brown exterior and soft, airy interior, it offers a delicate balance of richness and lightness.')">
+                <img src="images/Cups/pastry7.png" alt="">
+                <h3>Croissant</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">A golden-brown exterior and soft, airy interior, it offers a delicate balance of
+                    richness and lightness.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/pastry8.png', 'Éclair', 'Elongated choux pastry filled with a creamy custard or whipped cream and topped with a glossy chocolate icing.')">
+                <img src="images/Cups/pastry8.png" alt="">
+                <h3>Éclair</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">Elongated choux pastry filled with a creamy custard or whipped cream and topped with a
+                    glossy chocolate icing.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/pastry9.png', 'Belgian Waffle', `It's thicker than regular waffles and has deep pockets to hold toppings like syrup or fruit. Enjoyed for its sweet taste and satisfying crunch, it's a tasty treat for any time of day.`)">
+                <img src="images/Cups/pastry9.png" alt="">
+                <h3>Belgian Waffle</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">It's thicker than regular waffles and has deep pockets to hold toppings like syrup or
+                    fruit.</p>
+            </div>
+
+        </section>
+        <section id="show-dessert" class="container drinks">
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/dessert1.png', 'Parfait au Baileys et au Oréo', 'A delectable dessert featuring layers of creamy Baileys-infused mousse and crushed Oreos, creating a heavenly blend of rich flavors and textures.')">
+                <img src="images/Cups/dessert1.png" alt="">
+                <h3 style="font-size: 15px;">Parfait au Baileys et au Oréo</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">A delectable dessert featuring layers of creamy Baileys-infused mousse and crushed
+                    Oreos.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/dessert2.png', 'Choco Moist Cake', 'A decadent dessert featuring a rich and moist chocolate cake base, often layered with creamy chocolate frosting or ganache.')">
+                <img src="images/Cups/dessert2.png" alt="">
+                <h3>Choco Moist Cake</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">A decadent dessert featuring a rich and moist chocolate cake base, often layered with
+                    creamy chocolate frosting or ganache.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/dessert3.png', 'Leche Flan', 'It boasts a silky-smooth texture and a rich caramelized flavor.')">
+                <img src="images/Cups/dessert3.png" alt="">
+                <h3>Leche Flan</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">It boasts a silky-smooth texture and a rich caramelized flavor.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/dessert4.png', 'Mocha Brownie Cake', 'A decadent dessert that combines the rich flavors of chocolate and coffee. It features layers of moist chocolate cake infused with espresso, layered with creamy mocha frosting.')">
+                <img src="images/Cups/dessert4.png" alt="">
+                <h3>Mocha Brownie Cake</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">It features layers of moist chocolate cake infused with espresso, layered with creamy
+                    mocha frosting.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/dessert5.png', 'Strawberry Tiramisu', 'It features layers of sponge cake or ladyfingers soaked in strawberry syrup, interspersed with creamy mascarpone cheese and fresh strawberries.')">
+                <img src="images/Cups/dessert5.png" alt="">
+                <h3>Strawberry Tiramisu</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">Layers of sponge cake or ladyfingers soaked in strawberry syrup, creamy mascarpone
+                    cheese and fresh strawberries.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/dessert6.png', 'Churros', 'A classic Spanish treat consisting of fried dough pastry, typically dusted with cinnamon sugar. Side with a dip.')">
+                <img src="images/Cups/dessert6.png" alt="">
+                <h3>Churros</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">A classic Spanish treat consisting of fried dough pastry, typically dusted with cinnamon
+                    sugar. Side with a dip.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/dessert7.png', 'Blueberry Cheesecake', 'A decadent dessert featuring a creamy cheesecake filling infused with juicy blueberries, nestled on a buttery graham cracker crust.')">
+                <img src="images/Cups/dessert7.png" alt="">
+                <h3>Blueberry Cheesecake</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">A dessert featuring a creamy cheesecake filling with juicy blueberries,
+                    nestled on a buttery graham cracker crust.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/dessert8.png', 'Choco Oreo Pudding', 'A dessert featuring layers of rich chocolate pudding and crushed Oreo cookies, topped with whipped cream or chocolate shavings for added indulgence.')">
+                <img src="images/Cups/dessert8.png" alt="">
+                <h3>Choco Oreo Pudding</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">A dessert featuring layers of rich chocolate pudding and crushed Oreo cookies, topped
+                    with whipped cream or chocolate shavings.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/dessert9.png', 'Oreo Truffles', 'Bite-sized treats made by blending crushed Oreo cookies with cream cheese, forming a smooth mixture that is rolled into balls and coated in melted chocolate.')">
+                <img src="images/Cups/dessert9.png" alt="">
+                <h3>Oreo Truffles</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">Bite-sized treats made by blending crushed Oreo cookies with cream cheese that is rolled
+                    into balls and coated in melted chocolate.</p>
+            </div>
+        </section>
+        <section id="show-merch" class="container drinks">
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/candle1.png', 'La Jolie Muse', 'A whirlwind of rose petals, citrus fruits, and herbaceous spices forms from top notes of green, geranium, rose, pineapple, galbanum, and fig.')">
+                <img src="images/Cups/candle1.png" alt="">
+                <h3>La Jolie Muse</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">A whirlwind of rose petals, citrus fruits, and herbaceous spices forms from top notes of
+                    green</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/candle2.png', 'Coconut Macaroon', 'The scent of Toasted Coconut, Fresh Baked Cookie, Vanilla Bean & Touch of Spice.')">
+                <img src="images/Cups/candle2.png" alt="">
+                <h3>Coconut Macaroon</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">The scent of Toasted Coconut, Fresh Baked Cookie, Vanilla Bean & Touch of Spice.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/candle3.png', 'Bibliotheque', 'The velvety quality of the paper embodied in a touch of peach, plum and vanilla and the omnipresent patchouli like a backbone runs through the composition.')">
+                <img src="images/Cups/candle3.png" alt="">
+                <h3>Bibliotheque</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">The velvety quality of the paper embodied in a touch of peach, plum and vanilla and the
+                    omnipresent patchouli</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/candle4.png', 'Lavender Rose', 'The gentle and mildly piquant scent of lavender harmonizes with the tender and romantic aroma of rose, resulting in a lovely and tranquil scent that is simultaneously rejuvenating and calming.')">
+                <img src="images/Cups/candle4.png" alt="">
+                <h3>Lavender Rose</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">The gentle and mildly piquant scent of lavender harmonizes with the tender and romantic
+                    aroma of rose.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/candle5.png', 'White Caramel', 'A deep, rich, dense and sickly-sweet scent with warm, buttery tones.')">
+                <img src="images/Cups/candle5.png" alt="">
+                <h3>White Caramel</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">A deep, rich, dense and sickly-sweet scent with warm, buttery tones.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/candle6.png', 'Cinnamon Stick', `Cider's spiced, subtly sweet BFF that fills any room with noticeable, always-on fragrance.`)">
+                <img src="images/Cups/candle6.png" alt="">
+                <h3>Cinnamon Stick</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">Cider's spiced, subtly sweet BFF that fills any room with noticeable, always-on
+                    fragrance.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/candle7.png', 'Fireside', 'Fireside is a warm cozy aroma of blended notes of woods and spices.')">
+                <img src="images/Cups/candle7.png" alt="">
+                <h3>Fireside</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">Fireside is a warm cozy aroma of blended notes of woods and spices.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/candle8.png', 'Vanilla Sage', 'Rich, creamy vanilla meets crisp earthy notes of sage and pine topped with floral notes of lavender. Smells like sweet winter mint with a woody balsamic undertone.')">
+                <img src="images/Cups/candle8.png" alt="">
+                <h3>Vanilla Sage</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">Rich, creamy vanilla meets crisp earthy notes of sage and pine topped with floral notes
+                    of lavender.</p>
+            </div>
+            <div class="best-coffee"
+                onclick="pop_order('images/Cups/candle9.png', 'Lemon Mint Leaf', 'An uplifting scent of lemon and vanilla. Everything just feels cleaner with this scent of lemon in the air. ')">
+                <img src="images/Cups/candle9.png" alt="">
+                <h3>Lemon Mint Leaf</h3>
+                <div class="stars">
+                    <p>Ratings:</p>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="text">An uplifting scent of lemon and vanilla. Everything just feels cleaner with this scent
+                    of lemon in the air. </p>
+            </div>
+
+        </section>
+        <div id="popsection">
+            <a onclick="close_pop()"><i class="bi bi-x"></i></a>
+            <img src="" alt="" id="img_pop">
+            <h3 id="pop_prodname"></h3>
+            <div class="stars_pop">
+                <p>Ratings:</p>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+            <p id="text_pop"></p>
+            <div class="controls">
+                <p>$8.99</p>
+                <select name="quantity" class="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+                <button onclick="notif()">Add to cart</button>
+            </div>
+        </div>
+        <div id="blur"></div>
+    </main>
+    <footer>
+        <img src="images/LOGO/JA white.png" alt="">
+        <div class="property">
+            <h3>© 2024 Copyright <br> All rights reserved</h3>
+            <p>The content of this website, including but not limited to text, images, graphics, and logos, is the
+                property of JA's Coffee and is protected by copyright laws. Any unauthorized use, reproduction, or
+                distribution of this content is strictly prohibited.</p>
+        </div>
+        <div class="links">
+            <h3>Keep in touch</h3>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-envelope-at"></i></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

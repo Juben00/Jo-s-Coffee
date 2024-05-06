@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JA's Coffee</title>
+    <link rel="icon" href="/images/LOGO/JA white.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img src="images/LOGO/JA black 120.png" alt="MyLOGO" />
+        <ul>
+          <li><a href="index.html" class="act" >Home</a></li>
+          <li><a id="voidmenu" href="menuPage.html">Menu</a></li>
+          <li><a href="blog.html">Reviews</a></li>
+          <li><a href="contactPage.html">Contact</a></li>
+        </ul>
+        <a href="cart.html"><i class="bi bi-bag-check"></i></a>
+        <a onclick="show_login()"><i class="bi bi-person"></i></a>
+        <button onclick="openNav()" class="list">
+          <i class="bi bi-list"></i>
+        </button>   
+      </nav>
+    </header>
+    <div id="mySidenav" class="sidenav">
+      <a class="closebtn" onclick="closeNav()"><i class="bi bi-x"></i></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menuPage.html">Menu</a></li>
+        <li><a href="blog.html">Reviews</a></li>
+        <li><a href="contactPage.html">Contact</a></li>
+        <li>
+          <a href="cart.html"><i class="bi bi-bag-check"></i> Cart</a>
+        </li>
+        <li>
+          <a onclick="show_login()"><i class="bi bi-person"></i> Login</a>
+        </li>
+      </ul>
+    </div>
+    
+    
+    <div id="popsection">
+      <a onclick="close_pop()"><i class="bi bi-x"></i></a>
+      <img src="" alt="" id="img_pop">
+      <h3 id="pop_prodname"></h3>
+      <div class="stars_pop">
+          <p>Ratings:</p>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+      </div>
+      <p id="text_pop"></p>
+      <div class="controls">
+          <p>$8.99</p>
+          <select name="quantity" class="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+          </select>
+          <button onclick="notif()">Add to cart</button>
+      </div>
+  </div>
+  <div id="blur"></div>
+    <main>
+      <div class="cover-photo">
+        <img
+          src="images/background-footer/Your paragraph text.png"
+          alt="MyBackground"
+        />
+      </div>
+      <section id="login">
+        <div class="log">
+          <a onclick="close_login()"><i class="bi bi-x"></i></a>
+          <h3>Hello there!</h3>
+          <p>Please Log In to Continue</p>
+          <form action="#" class="signin-form">
+            <label for="Username" >Username:</label>
+            <input
+              type="text"
+              id="Usernamet"
+              placeholder="joevinansoc870@gmail.com" required
+            /><br />
+            <label for="Password">Password:</label>
+            <input type="password" id="Passwordt" placeholder="*******" required/><br />
+            <div>
+              <button class="login-button" id="login-btn">Login</button>
+              <a onclick="show_sign()">Create Account?</a>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section id="login1">
+        <div class="log">
+          <h3>Create Account</h3>
+          <p>Fill up the form</p>
+          <form action="#" class="signin-form2">
+            <div>
+              <label for="Fname">First Name:</label>
+              <input type="text" id="Fname" placeholder="John" /><br />
+              <label for="Lname">Last Name:</label>
+              <input type="text" id="Lname" placeholder="Abdul" /><br />
+              <label for="Email">Email:</label>
+              <input
+                type="text"
+                id="Email"
+                placeholder="joevin0@gmail.com"
+              /><br />
+              <label for="Username">Username:</label>
+              <input type="text" id="Username" placeholder="User" /><br />
+              <label for="Password">Password:</label>
+              <input
+                type="password"
+                id="Passworde"
+                placeholder="*******"
+              /><br />
+              <label for="Password">Password:</label>
+              <input
+                type="password"
+                id="Passwordr"
+                placeholder="*******"
+              /><br />
+              <label for="Phone">Phone Num:</label>
+              <input type="tel" id="Phone" placeholder="09*********" /><br />
+              <label for="Code">Pin:</label>
+              <input type="number" id="code" placeholder="####" /><br />
+              <div>
+                <button class="login-button">Signup</button>
+                <a onclick="close_sign()">Already have an account?</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="container features">
+        <div class="feature">
+          <i class="bi bi-geo-alt"></i>
+          <p>Locate our Store</p>
+            <div style="color: rgb(6, 6, 28);">
+              "Discover Our Global Network: Over 100 Branches Worldwide, Yours to Explore!"</div>
+        </div>
+        <div class="feature">
+          <i class="bi bi-gift"></i>
+          <p>Gift cards</p>
+          <div style="color: rgb(6, 6, 28);">"Sip, Savor, and Share the Love: Gift the Essence of Coffee Bliss!"</div>
+        </div>
+        <div class="feature">
+          <i class="bi bi-bicycle"></i>
+          <p>Cash on Delivery</p>
+          <div style="color: rgb(6, 6, 28);">"Experience Convenience at Your Doorstep: Enjoy Cash on Delivery with Every Order!"</div>
+        </div>
+        <div class="feature">
+          <i class="bi bi-wifi"></i>
+          <p>Free WIFI</p>
+          <div style="color: rgb(6, 6, 28);">"Stay Connected as You Savor: Enjoy Complimentary WiFi with Every Cup!"</div>
+        </div>
+      </section>
+      <section class="container finest">
+        <div class="circle">
+          <img
+            src="images/Cups/Taza De Café Volando Con Splash Y Granos De Café De Fondo Png PNG ,dibujos  Imágenes Prediseñadas De Taza De Café, Café, Taza PNG y PSD para Descargar Gratis _ Pngtree.png"
+            alt=""
+          />
+        </div>
+        <div class="town">
+          <h1>Finest Coffee in Town</h1>
+          <p>
+            Introducing "JA's Coffee" - where every cup tells a story of passion
+            and flavor. Nestled in the heart of town, our cozy coffee haven
+            invites you to savor the finest brews crafted with care and
+            expertise.
+            <br />
+            <br />
+            Step into our warm ambiance, where the aroma of freshly roasted
+            beans dances in the air, enticing your senses from the moment you
+            walk through the door. Our baristas, artisans of the coffee world,
+            meticulously prepare each cup, ensuring a symphony of taste with
+            every sip.
+            <br />
+            <br />
+            At "JA's Coffee," we believe in more than just coffee; we believe in
+            experiences. Whether you're seeking a serene moment of solitude with
+            a perfectly brewed espresso or engaging in lively conversations over
+            our signature pour-over blends, every visit promises to be a journey
+            of indulgence and delight.
+          </p>
+        </div>
+      </section>
+      <h3 class="navi bests">Best Sellers</h3>
+      <section class="container best">
+        <div class="min-nav">
+          <button
+            id="but1"
+            class="min-buts active"
+            onclick="openTab2(event, 'show-drinks')"
+          >
+            Drinks
+          </button>
+          <button class="min-buts" onclick="openTab2(event, 'show-pastrys')">
+            Pastry
+          </button>
+          <button class="min-buts" onclick="openTab2(event, 'show-desserts')">
+            Desserts
+          </button>
+          <button class="min-buts" onclick="openTab2(event, 'show-merchs')">
+            Merch
+          </button>
+        </div>
+        <hr />
+
+        
+        <div class="trio" id="show-drinks">
+          <div
+            class="best-coffee"
+            onclick="pop_order('/images/Cups/paper.png', 'Black  Coffee', 'Black coffee is a beverage made from roasted coffee beans. The beans are ground and soaked in water, which releases their flavor, color, caffeine content, and nutrients. s')"
+          >
+            <img src="/images/Cups/paper.png" alt="" />
+            <h3>Black Coffee</h3>
+            <div class="stars">
+              <p>Ratings:</p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text">
+              Black coffee is a beverage made from roasted coffee beans.
+            </p>
+          </div>
+          <div
+            class="best-coffee"
+            onclick="pop_order('/images/Cups/paper2.png', 'Caramel Macchiato', 'This medium-dark roast has a rich, full flavor with hints of dark chocolate, caramel, and a bit of toasted nuts.')"
+          >
+            <img src="/images/Cups/paper2.png" alt="" />
+            <h3>Caramel Macchiato</h3>
+            <div class="stars">
+              <p>Ratings:</p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text">
+              This medium-dark roast has a rich, full flavor with hints of dark
+              chocolate, caramel, and a bit of toasted nuts.
+            </p>
+          </div>
+          <div
+            class="best-coffee"
+            onclick="pop_order('/images/Cups/paper3.png', 'Coffee Milkshake', 'Indulge in the creamy decadence of a coffee milkshake, where the bold flavors of freshly brewed coffee blend seamlessly with smooth, velvety ice cream.')"
+          >
+            <img src="/images/Cups/paper3.png" alt="" />
+            <h3>Coffee Milkshake</h3>
+            <div class="stars">
+              <p>Ratings:</p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text">
+              Indulge in the creamy decadence of a coffee milkshake, where the
+              bold flavors of freshly brewed coffee blend
+            </p>
+          </div>
+        </div>
+        <div class="trio" id="show-pastrys">
+          <div
+            class="best-coffee"
+            onclick="pop_order('/images/Cups/pastry1.png', 'Mini Donuts', 'Perfect for snacking or as a dessert option, mini donuts are sure to satisfy any sweet craving with their delightful taste and adorable size.')"
+          >
+            <img src="/images/Cups/pastry1.png" alt="" />
+            <h3>Mini Donuts</h3>
+            <div class="stars">
+              <p>Ratings:</p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text">
+              Mini donuts are sure to satisfy any sweet craving with their
+              delightful taste and adorable size.
+            </p>
+          </div>
+          <div
+            class="best-coffee"
+            onclick="pop_order('/images/Cups/pastry2.png', 'Rainbow Cookie', 'Sweet and colorful Cookie topped with rainbow-colored chocolate chips .')"
+          >
+            <img src="/images/Cups/pastry2.png" alt="" />
+            <h3>Rainbow Cookie</h3>
+            <div class="stars">
+              <p>Ratings:</p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text">
+              Sweet and colorful Cookie topped with rainbow-colored chocolate
+              chips .
+            </p>
+          </div>
+          <div
+            class="best-coffee"
+            onclick="pop_order('/images/Cups/pastry3.png', 'Macarons', ' These colorful and dainty treats come in a variety of flavors and are known for their crispy exterior and soft, chewy interior.')"
+          >
+            <img src="/images/Cups/pastry3.png" alt="" />
+            <h3>Macarons</h3>
+            <div class="stars">
+              <p>Ratings:</p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text">
+              These colorful and dainty treats come in a variety of flavors and
+              are known for their crispy exterior and soft, chewy interior.
+            </p>
+          </div>
+        </div>
+        <div class="trio" id="show-desserts">
+          <div
+            class="best-coffee"
+            onclick="pop_order('/images/Cups/dessert1.png', 'Parfait au Baileys et au Oréo', 'A delectable dessert featuring layers of creamy Baileys-infused mousse and crushed Oreos, creating a heavenly blend of rich flavors and textures.')"
+          >
+            <img src="/images/Cups/dessert1.png" alt="" />
+            <h3 style="font-size: 15px">Parfait au Baileys et au Oréo</h3>
+            <div class="stars">
+              <p>Ratings:</p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text">
+              A delectable dessert featuring layers of creamy Baileys-infused
+              mousse and crushed Oreos.
+            </p>
+          </div>
+          <div
+            class="best-coffee"
+            onclick="pop_order('/images/Cups/dessert2.png', 'Choco Moist Cake', 'A decadent dessert featuring a rich and moist chocolate cake base, often layered with creamy chocolate frosting or ganache.')"
+          >
+            <img src="/images/Cups/dessert2.png" alt="" />
+            <h3>Choco Moist Cake</h3>
+            <div class="stars">
+              <p>Ratings:</p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text">
+              A decadent dessert featuring a rich and moist chocolate cake base,
+              often layered with creamy chocolate frosting or ganache.
+            </p>
+          </div>
+          <div
+            class="best-coffee"
+            onclick="pop_order('/images/Cups/dessert3.png', 'Leche Flan', 'It boasts a silky-smooth texture and a rich caramelized flavor.')"
+          >
+            <img src="/images/Cups/dessert3.png" alt="" />
+            <h3>Leche Flan</h3>
+            <div class="stars">
+              <p>Ratings:</p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text">
+              It boasts a silky-smooth texture and a rich caramelized flavor.
+            </p>
+          </div>
+        </div>
+        <div class="trio" id="show-merchs">
+          <div
+            class="best-coffee"
+            onclick="pop_order('/images/Cups/candle1.png', 'La Jolie Muse', 'A whirlwind of rose petals, citrus fruits, and herbaceous spices forms from top notes of green, geranium, rose, pineapple, galbanum, and fig.')"
+          >
+            <img src="/images/Cups/candle1.png" alt="" />
+            <h3>La Jolie Muse</h3>
+            <div class="stars">
+              <p>Ratings:</p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text">
+              A whirlwind of rose petals, citrus fruits, and herbaceous spices
+              forms from top notes of green
+            </p>
+          </div>
+          <div
+            class="best-coffee"
+            onclick="pop_order('/images/Cups/candle2.png', 'Coconut Macaroon', 'The scent of Toasted Coconut, Fresh Baked Cookie, Vanilla Bean & Touch of Spice.')"
+          >
+            <img src="/images/Cups/candle2.png" alt="" />
+            <h3>Coconut Macaroon</h3>
+            <div class="stars">
+              <p>Ratings:</p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text">
+              The scent of Toasted Coconut, Fresh Baked Cookie, Vanilla Bean &
+              Touch of Spice.
+            </p>
+          </div>
+          <div class="best-coffee" onclick="pop_order('/images/Cups/candle3.png', 'Bibliotheque', 'The velvety quality of the paper embodied in a touch of peach, plum and vanilla and the omnipresent patchouli like a backbone runs through the composition.')">
+            <img src="/images/Cups/candle3.png" alt="" />
+            <h3>Bibliotheque</h3>
+            <div class="stars">
+              <p>Ratings:</p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text">
+              The velvety quality of the paper embodied in a touch of peach,
+              plum and vanilla and the omnipresent patchouli
+            </p>
+          </div>
+        </div>
+      </section>
+      <h3 class="navi bests">Our Store</h3>
+      <section class="container pics">
+        <img src="images/Cups/Untitled design.png" alt="" />
+      </section>
+      <h3 class="navi taff">Our Staff</h3>
+      <section class="container staff">
+        <div class="mybarista">
+          <h1>Best Barista in Town</h1>
+          <p>
+            Introducing the unparalleled team at JA's Coffee - where passion
+            meets expertise and every cup is served with a smile. Our staff
+            embodies the essence of hospitality, ensuring each customer feels
+            welcomed and valued from the moment they step through our doors.
+            <br /><br />
+            With their dedication and commitment to excellence, our baristas
+            elevate the coffee experience to new heights. Whether crafting
+            intricate latte art or recommending the perfect blend to suit your
+            palate, they go above and beyond to make your visit unforgettable.
+            But it's not just about the coffee; it's about the connections
+            forged over shared moments and conversations. Our staff creates a
+            sense of community, fostering relationships that extend beyond the
+            coffee counter.
+            <br /><br />
+            At JA's Coffee, our team isn't just serving coffee; they're crafting
+            experiences, one cup at a time. Join us and experience the
+            difference that our exceptional staff makes in your daily coffee
+            ritual.
+          </p>
+        </div>
+        <div class="mychar">
+          <img src="/images/model/2023-AP-RBC-8-600x600.jpg" alt="" />
+        </div>
+      </section>
+      <h3 class="navi loc">Store location</h3>
+      <section class="container location">
+        <img src="images/gallery/Screenshot 2024-02-18 033009.png" alt="" />
+      </section>
+    </main>
+    <footer>
+      <img src="images/LOGO/JA white.png" alt="" />
+      <div class="property">
+        <h3>
+          © 2024 Copyright <br />
+          All rights reserved
+        </h3>
+        <p>
+          The content of this website, including but not limited to text,
+          images, graphics, and logos, is the property of JA's Coffee and is
+          protected by copyright laws. Any unauthorized use, reproduction, or
+          distribution of this content is strictly prohibited.
+        </p>
+      </div>
+      <div class="links">
+        <h3>Keep in touch</h3>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-envelope-at"></i></a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
